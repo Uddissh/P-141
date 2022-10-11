@@ -13,7 +13,7 @@ not_liked_articles = []
 
 app = Flask(__name__)
 
-@app.route("/get-article")
+@app.route("/get-article", encoding=("utf8"))
 def get_article():
     return jsonify({
         "data": all_articles[0],
